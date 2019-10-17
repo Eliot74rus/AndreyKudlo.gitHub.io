@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test page</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
+    <style>
+        tr,th, td{
+            border: 1px solid black;
+        }
+        #button{
+            margin-left: 40%;
+        }
+        #button:hover{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+            <div style="padding-left: 35%;">
+        <div style="width: 40%;">
+        <img src="f1.jpg" alt="foto" style="width: 150px;" >
+        <div style="width: 50%; float:right;">
+        <h1>Андрей Кудло</h1>
+        
+        <p>
+            <b>Адрес:</b>г.Челябинск
+        </p>
+        <p>
+            <b>Опыт работы:</b> Нет
+        </p>
+        <p>
+            <b>Телефон:</b> 8 (908) 062-10-78
+        </p>
+        </div>
+    </div>
+</div>
+<div align="center" style="margin-bottom: 10px;">
+    <table style="width: 30%; border-collapse:collapse;">
+        <tr >
+            <th></th>
+            <th>Java</th>
+            <th>JavaScript</th>
+            <th>C++</th>
+            <th>C#</th>
+            <th>Swift</th>
+        </tr>
+            <tr>
+                <td>Отличное владение</td>
+                <td>Нет</td>
+                <td>Нет</td>
+                <td>Нет</td>
+                <td>Нет</td>
+                <td>Нет</td>
+            </tr>
+            <tr>
+                <td>Хорошее владение</td>
+                <td>Нет</td>
+                <td>Нет</td>
+                <td>Нет</td>
+                <td>Нет</td>
+                <td>Нет</td>
+            </tr>
+            <tr>
+                <td>Среднее владение</td>
+                <td>нет</td>
+                <td>Нет</td>
+                <td>Да</td>
+                <td>Нет</td>
+                <td>Нет</td>
+            </tr>
+            <tr>
+                <td>плохое владение</td>
+                <td>Да</td>
+                <td>Да</td>
+                <td>Да</td>
+                <td>Да</td>
+                <td>Нет</td>
+            </tr>
+        </tr>
+    </table>
+    </div>
+    <div  style="width:100%; display: table;">
+     
+        <div  style="display: table-cell; padding-left:10% ;">
+            <p>Имя</p>
+            <input type="text"placeholder="Имя" style="width: 95%;">
+        </div>
+        <div  style="display: table-cell;">
+            <p>Номер</p>
+            <input id="phone" type="text"  style="width: 80%;" placeholder="Телефон">
+        </div>
+        
+    </div>
+    </div>
+   <p id="button">Кликните сюда, чтобы узнать меня подробнее</p>
+    <p id="infa" style="display: none;">
+        <span>
+         Меня зовут Андрей.С фантазией у меня всё плохо.Так что это всё что я придумал(Главное выполняет свой функционал).   
+        </span>
+    </p>
+	
+<script>
+$("#button").click(function(e){
+    if($("#infa").css("display") == "none"){
+        $("#infa").css("display", "block");
+    //$("#infa").fadeIn("slow");
+    }else{
+        $("#infa").css("display", "none");
+    }
+})
+
+$(function(){
+
+  $("#phone").mask("8(999) 999-9999");
+});
+
+</script>
+</body>
+</html>
